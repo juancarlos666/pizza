@@ -1,11 +1,10 @@
 // Write your Pizza Builder JavaScript in this file.
-
+$(document).ready(function(){
 $('aside').children('ul').children('li:nth-child(4)').toggle();
 $('aside').children('ul').children('li:last-child').toggle();
 $('aside').children('strong').text("$13");
 $('.btn-crust').toggleClass("active");
 $('.btn-sauce').toggleClass("active");
-
 
 function pricePizza(nameClass,valor,elemento){
 
@@ -45,4 +44,5 @@ $('.btn-sauce').click(function(){
 $('.btn-crust').click(function(){
     $("section").toggleClass("sauce-white");
     pricePizza('.btn-crust',5,5);
+});
 });
